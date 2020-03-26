@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  
+    <script>  $.getJSON("https://api.ipify.org?format=json",    function(data) { ip=data.ip;  })   </script> 
+    
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.downloadbutton {
+    background-color: #456346;
+    border: none;
+    color: white;
+    padding: 6px 51px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 2px; */
+    cursor: pointer;
+}
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 45%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: #ccd8ff;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+h1 {
+  color: #fff;
+  text-align: center;
+}
+.change{
+color: #0073e6;
+}
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+#logout
+{
+background-color: darkorange; border: none; color: white; padding: 6px 21px;text-align: center; text-decoration: none;display: inline-block;font-size: 10px;margin: 5px -19px; cursor: pointer;
+}
+</style>
+</head>
+<body>
+<iframe id="my_iframe" style="display:none;"></iframe> 
+<h1><span class="change">Cloud</span>That Attendance System</h1>
+<div class="row">
+  <div class="col-sm-4">
+  </div>
+  <div class="col-sm-6"></div>
+  <div class="col-sm-2"><button id="logout" onclick="logout()">LogOut</button></div>
+</div>
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <br><br>
+    <div class="row">
+  <div class="col-sm-6">
+   <div id="cin">
+  
+    </div>
+  </div>
+  
+  <div class="col-sm-6" id="downloadbu"></div>
+</div>
+   
+  </div>
+
+</div>
+<br><br>
+<div class="row">
+  <div class="col-sm-4">
+  <button class="button" id="markbutton"></button>
+  </div>
+  <div class="col-sm-4"></div>
+  
+  <div class="col-sm-4"><h3  id="nameattendee"></div>
+</div>
+
+<br><br>
+
+<div class="container">
+  <table class="table" id="tableid">
+   <thead><tr><th> <h2>Attendance Log</h2></th><th id="employeeattlog"></th> </thead>
+    <thead>
+      <tr>
+        <th>Entry Time</th>
+        <th>Exit Time</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody id="logattendance">
+      
+    </tbody>
+  </table>
+</div>
+<script src="attendance.js"></script>
+
+
+
+</body>
+</html>

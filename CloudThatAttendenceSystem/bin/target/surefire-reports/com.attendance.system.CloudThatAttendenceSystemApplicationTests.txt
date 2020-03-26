@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.attendance.system.CloudThatAttendenceSystemApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.726 s <<< FAILURE! - in com.attendance.system.CloudThatAttendenceSystemApplicationTests
+contextLoads  Time elapsed: 0.014 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The type java.lang.Object cannot be resolved. It is indirectly referenced from required .class files
+	The type java.lang.String cannot be resolved. It is indirectly referenced from required .class files
+	The type java.lang.Class cannot be resolved. It is indirectly referenced from required .class files
+	Implicit super constructor Object() is undefined for default constructor. Must define an explicit constructor
+
+	at com.attendance.system.CloudThatAttendenceSystemApplicationTests.<init>(CloudThatAttendenceSystemApplicationTests.java:1)
+
